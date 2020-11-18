@@ -50,6 +50,9 @@ cd /runner
 # Hack due to the DinD volumes
 mv ./externalstmp/* ./externals/
 
+# Hack due to the DinD volumes
+mv ./externalstmp/* ./externals/
+
 for f in runsvc.sh RunnerService.js; do
   diff {bin,patched}/${f} || :
   sudo mv bin/${f}{,.bak}
