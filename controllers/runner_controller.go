@@ -407,10 +407,6 @@ func (r *RunnerReconciler) newPod(runner v1alpha1.Runner) (corev1.Pod, error) {
 				Name:      "externals",
 				MountPath: "/runner/externals",
 			},
-			{
-				Name:      "externals",
-				MountPath: "/runner/externals",
-			},
 		}
 		pod.Spec.Containers[0].Env = append(pod.Spec.Containers[0].Env, corev1.EnvVar{
 			Name:  "DOCKER_HOST",
@@ -423,10 +419,6 @@ func (r *RunnerReconciler) newPod(runner v1alpha1.Runner) (corev1.Pod, error) {
 				{
 					Name:      "work",
 					MountPath: workDir,
-				},
-				{
-					Name:      "externals",
-					MountPath: "/runner/externals",
 				},
 				{
 					Name:      "externals",
